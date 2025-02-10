@@ -11,6 +11,7 @@ It serves as a platform for users to capture and store media files efficiently.
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 
 ## Features
@@ -114,6 +115,11 @@ Make sure to set the following environment variables in your `.env` file in the 
 - `JWT_COOKIE_EXPIRES_IN`: Expiration time for JWT cookies.
 - `EMAIL_USER`: Email address for sending emails.
 - `EMAIL_PASS`: Password for the email account.
+
+## Deployment
+
+- **Backend** is deployed at Render: [https://media-capture-and-storage-web.onrender.com](https://media-capture-and-storage-web.onrender.com)
+- **Frontend** is deployed at Vercel: [https://media-capture-and-storage-web-application-frontend-qa2y84773.vercel.app](https://media-capture-and-storage-web-application-frontend-qa2y84773.vercel.app)
 
 ## Contributing
 
