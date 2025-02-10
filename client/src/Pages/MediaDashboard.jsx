@@ -30,6 +30,22 @@ export const MediaDashboard = () => {
     fetchMedia();
   }, [dispatch]);
 
+  const handleDelete = async (id) => { 
+    try {
+      const token = localStorage.getItem('token'); // Retrieve the token
+      await axios.delete(`http://localhost:5000/api/media/${id}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`, // Include the token in the headers
+        },
+      });
+      // Optionally, you can dispatch an action to update the mediaList in the Redux store
+      dispatch(setMedia(mediaList.filter(media => media._id !== id))); // Update the mediaList after deletion
+    } catch (error) {
+      console.error('Failed to delete media:', error);
+      alert("Failed to delete media. Please try again.");
+    }
+  };
+
   return (
     <div className="media-dashboard-container">
       <div className="media-grid">
@@ -44,6 +60,7 @@ export const MediaDashboard = () => {
               </video>
             )}
             <h3 className="media-filename">{media.filename}</h3>
+            <button onClick={() => handleDelete(media._id)} className="delete-button">Delete</button>
           </div>
         ))}
       </div>
