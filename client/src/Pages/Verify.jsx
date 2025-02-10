@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { showToast } from '../utils/toast';
-import './Verify.css'; // Ensure to create this CSS file
+import './styles/Verify.css'; // Ensure to create this CSS file
 
 export const Verify = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
