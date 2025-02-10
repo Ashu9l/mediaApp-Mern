@@ -23,7 +23,7 @@ export const Verify = () => {
         const otpCode = otp.join('');
         // Add your submit logic here
         showToast('OTP submitted: ' + otpCode, 'success');
-        navigate('/upload'); // Redirect after submission
+        navigate('/'); // Redirect after submission
     };
 
     const handleResendOtp = () => {
