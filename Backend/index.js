@@ -22,7 +22,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/", (req, res) =>
-  res.send('<h1>Welcome to "The DataTalks Ai" Backend </h1>')
+  res.send('<h1>Welcome to "The  Media Capture and Storage Web Application" Backend </h1>')
 );
 // app.use("/api/user", userRoute);
 
