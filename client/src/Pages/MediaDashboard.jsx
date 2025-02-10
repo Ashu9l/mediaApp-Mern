@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMedia } from '../features/media/mediaSlice';
 import axios from 'axios';
-import './MediaDashboard.css'; // Ensure to create this CSS file
+import './styles/MediaDashboard.css'; // Ensure to create this CSS file
 
 export const MediaDashboard = () => {
   const dispatch = useDispatch();

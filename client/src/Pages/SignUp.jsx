@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { showToast } from '../utils/toast';
 import { jwtDecode } from 'jwt-decode';
-import './SignUp.css'
+import './styles/SignUp.css'
 export const SignUp = () => {
     const navigate = useNavigate();
     const formRef = useRef(null);
@@ -104,7 +104,7 @@ export const SignUp = () => {
                 </form>
                 <div className="login-link">
                     <span>Already have an account? </span>
-                    <Link to="/login" className="link">Sign In</Link>
+                    <Link to="/" className="link">Sign In</Link>
                 </div>
             </div>
         </div>

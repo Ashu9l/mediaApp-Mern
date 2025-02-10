@@ -7,7 +7,7 @@ import { showToast } from '../utils/toast';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import { FcGoogle } from 'react-icons/fc';
-import "./Login.css"
+import "./styles/Login.css"
 
 export const Login = () => {
     const navigate = useNavigate();
