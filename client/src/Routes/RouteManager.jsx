@@ -2,12 +2,11 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import Login from '../Pages/Login'
-import SignUp from '../Pages/SignUp'
-import Verify from '../Pages/verify'
-// import MediaDashboard from ''
-import MediaUpload from '../Pages/MediaUpload'
-import MediaDashboard from '../Pages/MediaDashboard'
+import {Login} from '../Pages/Login'
+import {SignUp} from '../Pages/SignUp'
+import {MediaUpload} from '../Pages/MediaUpload'
+import {MediaDashboard} from '../Pages/MediaDashboard'
+import { Verify } from '../Pages/Verify'
 // import MediaDashboard from '../Pages/MediaDashboard'
 
 
@@ -17,7 +16,7 @@ function RouteManager() {
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
-        <Route path='/verify' element={<Verify />} />
+        <Route path='/verify' element={<Verify/>} />
         <Route path="/dashboard" element={<MediaDashboard />} />
         <Route path="/upload" element={<MediaUpload />} />
       </Routes>

@@ -9,3 +9,4 @@ const MediaSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("Media", MediaSchema);
+ 

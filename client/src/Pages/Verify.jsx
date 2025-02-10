@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { showToast } from '../utils/toast';
 import './Verify.css'; // Ensure to create this CSS file
 
-const Verify = () => {
+export const Verify = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
     const navigate = useNavigate();
 
@@ -59,4 +59,4 @@ const Verify = () => {
     );
 };
 
-export default Verify;
+// export default Verify;

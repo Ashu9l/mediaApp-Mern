@@ -4,7 +4,7 @@ import { setMedia } from '../features/media/mediaSlice';
 import axios from 'axios';
 import './MediaDashboard.css'; // Ensure to create this CSS file
 
-const MediaDashboard = () => {
+export const MediaDashboard = () => {
   const dispatch = useDispatch();
   const mediaList = useSelector((state) => state.media.mediaList);
 
@@ -51,5 +51,5 @@ const MediaDashboard = () => {
   );
 };
 
-export default MediaDashboard;
+// export default MediaDashboard;
   

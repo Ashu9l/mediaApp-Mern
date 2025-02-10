@@ -9,7 +9,7 @@ import { jwtDecode } from 'jwt-decode';
 import { FcGoogle } from 'react-icons/fc';
 import "./Login.css"
 
-const Login = () => {
+export const Login = () => {
     const navigate = useNavigate();
     const formRef = useRef(null);
     const [formData, setFormData] = useState({
@@ -130,4 +130,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+// export default Login;

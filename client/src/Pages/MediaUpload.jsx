@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './MediaUpload.css';
 
-const MediaUpload = () => {
+export const MediaUpload = () => {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const navigate = useNavigate();
@@ -59,4 +59,4 @@ const MediaUpload = () => {
   );
 };
 
-export default MediaUpload;
+// export default MediaUpload;

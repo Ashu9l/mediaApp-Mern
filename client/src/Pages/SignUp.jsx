@@ -7,7 +7,7 @@ import axios from 'axios';
 import { showToast } from '../utils/toast';
 import { jwtDecode } from 'jwt-decode';
 import './SignUp.css'
-const SignUp = () => {
+export const SignUp = () => {
     const navigate = useNavigate();
     const formRef = useRef(null);
     
@@ -111,4 +111,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+// export default SignUp;
