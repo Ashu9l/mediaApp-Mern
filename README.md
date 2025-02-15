@@ -1,5 +1,11 @@
 # Media Capture and Storage Web Application
 
+{0848E3EA-DDA0-4BE6-AA4E-03C6C63F9B26}.png
+
+Screenshot 2025-02-15 090854.png
+
+
+
 Welcome to the Media Capture and Storage Web Application! This project is a full-stack web application designed to facilitate user authentication, media uploads, and management.
 It serves as a platform for users to capture and store media files efficiently.
 
