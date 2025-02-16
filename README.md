@@ -34,8 +34,6 @@ Axios for API requests
 Installation
 Clone the repository:
 
-git clone https://github.com/Agrima440/Media-Capture-and-Storage-Web-Application.git
-Install backend dependencies:
 
 cd Backend
 npm install
@@ -51,8 +49,6 @@ MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRES_IN=90d
 JWT_COOKIE_EXPIRES_IN=90
-EMAIL_USER=your_email@example.com or use "agrima.sharma@usedatatalk.ai"
-EMAIL_PASS=your_email_password or "sifx lyfi ndmm vgut"
 Usage
 Start the backend server:
 
