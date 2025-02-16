@@ -33,7 +33,7 @@ export const SignUp = () => {
                 showToast('Confirm your password', 'info');
                 return;
             } else {
-                const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, formData);
                 if (response.data.success) {
                     showToast(response.data.message, 'success');
                     navigate('/verify');
@@ -61,7 +61,7 @@ export const SignUp = () => {
                 picture: decoded.picture
             };
 
-            const response = await axios.post('/api/user/google-auth', googleUser);
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/user/google-auth`, googleUser);
             if (response.data.success) {
                 showToast('Successfully signed in with Google', 'success');
                 navigate('/');

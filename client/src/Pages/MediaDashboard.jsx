@@ -10,11 +10,11 @@ export const MediaDashboard = () => {
 
   useEffect(() => {
     const fetchMedia = async () => {
-      const token = localStorage.getItem('token'); // Retrieve the token
+      const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('http://localhost:5000/api/media/', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/media/`, {
           headers: {
-            'Authorization': `Bearer ${token}`, // Include the token in the headers
+            'Authorization': `Bearer ${token}`,
           },
         });
         dispatch(setMedia(response.data));
@@ -32,10 +32,10 @@ export const MediaDashboard = () => {
 
   const handleDelete = async (id) => { 
     try {
-      const token = localStorage.getItem('token'); // Retrieve the token
-      await axios.delete(`http://localhost:5000/api/media/${id}`, {
+      const token = localStorage.getItem('token');
+      await axios.delete(`${import.meta.env.VITE_API_URL}/api/media/${id}`, {
         headers: {
-          'Authorization': `Bearer ${token}`, // Include the token in the headers
+          'Authorization': `Bearer ${token}`,
         },
       });
       // Optionally, you can dispatch an action to update the mediaList in the Redux store
@@ -52,10 +52,10 @@ export const MediaDashboard = () => {
         {mediaList.map((media) => (
           <div key={media._id} className="media-item">
             {media.fileType === 'image' ? (
-              <img src={`http://localhost:5000${media.fileUrl}`} alt={media.filename} className="media-image" />
+              <img src={`${import.meta.env.VITE_API_URL}${media.fileUrl}`} alt={media.filename} className="media-image" />
             ) : (
               <video controls className="media-video">
-                <source src={`http://localhost:5000${media.fileUrl}`} type="video/mp4" />
+                <source src={`${import.meta.env.VITE_API_URL}${media.fileUrl}`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             )}

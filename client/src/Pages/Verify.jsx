@@ -19,16 +19,47 @@ export const Verify = () => {
         }
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const otpCode = otp.join('');
-        // Add your submit logic here
-        showToast('OTP submitted: ' + otpCode, 'success');
-        navigate('/'); // Redirect after submission
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/verify`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                credentials: 'include',
+                body: JSON.stringify({ otp: otpCode }),
+            });
+            
+            if (response.ok) {
+                showToast('Verification successful', 'success');
+                navigate('/');
+            } else {
+                showToast('Verification failed', 'error');
+            }
+        } catch (error) {
+            showToast('Error verifying OTP', 'error');
+        }
     };
 
-    const handleResendOtp = () => {
-        // Add your resend OTP logic here
-        showToast('OTP resent', 'info');
+    const handleResendOtp = async () => {
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/resend-otp`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                credentials: 'include',
+            });
+            
+            if (response.ok) {
+                showToast('OTP resent successfully', 'success');
+            } else {
+                showToast('Failed to resend OTP', 'error');
+            }
+        } catch (error) {
+            showToast('Error resending OTP', 'error');
+        }
     };
 
     return (

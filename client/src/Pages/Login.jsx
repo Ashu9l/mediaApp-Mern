@@ -31,7 +31,7 @@ export const Login = () => {
                 showToast('Registered Email/Password required', 'warning');
                 return;
             } else {
-                const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+                const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, formData);
                 // console.log("response is ",response)
                 if (response.data.success) {
                     showToast('Login Successful', 'success');
@@ -56,10 +56,10 @@ export const Login = () => {
                 googleId: decoded.sub,
             };
 
-            const response = await axios.post('http://localhost:5000/api/auth/google-auth', googleUser);
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/google-auth`, googleUser);
             if (response.data.success) {
                 showToast('Successfully signed in with Google', 'success');
-                // localStorage.setItem('username', response.data.user.name);
+                localStorage.setItem('token', response.data.token);
                 navigate('/upload');
             } else {
                 showToast("User Already Registered", 'success');
